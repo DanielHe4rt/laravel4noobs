@@ -17,5 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/user/{username}', [UsersController::class, 'getProfile']);
+Route::get('/u/{username}', [UsersController::class, 'getProfile'])->name('user-profile');
 Route::get('/user/me', [UsersController::class, 'getMeProfile']);
+Route::get('/test', [UsersController::class, 'test']);
